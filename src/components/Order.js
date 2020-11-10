@@ -44,6 +44,7 @@ const Order = ({ pizza }) => {
         {showTitle && (
           <motion.h2 exit={{ y: -1000 }}>Thank you for your order :)</motion.h2>
         )}
+        {/* few bugs */}
       </AnimatePresence>
 
       <motion.p variants={childVariants}>
