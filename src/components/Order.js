@@ -40,12 +40,7 @@ const Order = ({ pizza }) => {
       variants={containerVariants}
       className='container order'
     >
-      <AnimatePresence>
-        {showTitle && (
-          <motion.h2 exit={{ y: -1000 }}>Thank you for your order :)</motion.h2>
-        )}
-        {/* few bugs */}
-      </AnimatePresence>
+      <h2>Thank you for your order :)</h2>
 
       <motion.p variants={childVariants}>
         You ordered a {pizza.base} pizza with:
