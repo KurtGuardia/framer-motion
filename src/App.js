@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './components/Home';
 import Base from './components/Base';
@@ -8,6 +8,7 @@ import Order from './components/Order';
 import { AnimatePresence } from 'framer-motion';
 
 function App() {
+  const location = useLocation();
   const [pizza, setPizza] = useState({ base: '', toppings: [] });
 
   const addBase = (base) => {
@@ -27,8 +28,8 @@ function App() {
   return (
     <>
       <Header />
-      <AnimatePresence>
-        <Switch>
+      <AnimatePresence exitBeforeEnter>
+        <Switch location={location} key={location.key}>
           <Route path='/base'>
             <Base addBase={addBase} pizza={pizza} />
           </Route>
