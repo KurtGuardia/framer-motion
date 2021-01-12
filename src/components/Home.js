@@ -24,10 +24,10 @@ const containerVariants = {
       duration: 2,
       delay: 1.5,
     },
-    exit: {
-      x: '-100vw',
-      // transition: { ease: 'easeInOut' },
-    },
+  },
+  exit: {
+    x: '-100vw',
+    transition: { ease: 'easeInOut' },
   },
 };
 
